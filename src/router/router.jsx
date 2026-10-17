@@ -4,7 +4,8 @@ import { MainPage } from '../common/layouts/main-page/main-page'
 import { AuthProtectedRoutes } from '../features/pages/shop/components/auth/protected-routes/auth-protected-routes'
 
 // Code-splitting por ruta: cada página se descarga al navegar a ella.
-const page = (load, name) => async () => ({ Component: (await load())[name] })
+const loaders = []
+const page = (load, name) => { loaders.push(load); return async () => ({ Component: (await load())[name] }) }
 
 export const router = createBrowserRouter([
 
@@ -55,3 +56,6 @@ export const router = createBrowserRouter([
     }
 
 ])
+
+// Con el navegador en reposo se bajan los chunks restantes (son chicos): navegar no espera red.
+;(window.requestIdleCallback ?? setTimeout)(() => loaders.forEach((load) => load()))

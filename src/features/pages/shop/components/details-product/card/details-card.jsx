@@ -7,6 +7,7 @@ import { DisplayTags } from '../../../utils/details-product/display-tags';
 import { useCategoriesStore } from '../../../store/categories-store';
 import { useGetAuthCartStore } from '../../../hooks/use-get-auth-cart-store';
 import { QuantitySelector } from '../../../shared/components/quantity-selector/quantity-selector';
+import { toast } from '../../../store/toast-store';
 import { OutlineButton } from '../../../shared/components/outline-button/outline-button';
 
 
@@ -58,7 +59,7 @@ export function DetailsCard({ product }) {
                             <div>
                                 <OutlineButton
                                     className="rounded-xl px-1 lg:px-10 py-3"
-                                    onClick={() => addToCart(product, quantity)}
+                                    onClick={() => { addToCart(product, quantity); toast(`${title} added to cart`) }}
                                     disabled={outOfStock}
                                 >
                                     {outOfStock ? "Sin stock" : "Add To Cart"}

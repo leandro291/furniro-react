@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
 import { ContactInputCard } from './contact-input-card'
+import { toast } from '../../../store/toast-store';
 import { useInputRefs } from '../../../hooks/use-inputs-ref';
 
 export function ContactInput() {
@@ -20,22 +21,22 @@ export function ContactInput() {
         const messageValue = message.getValue()
 
         if (nameValue.trim() == ""){
-            alert("Your name is required")
+            toast("Your name is required", "error")
             return
         }
 
         if (!emailValue.includes("@")){
-            alert("Your email is required")
+            toast("Your email is required", "error")
             return
         }
 
         if (subjectValue.trim() == ""){
-            alert("Your subject is required")
+            toast("Your subject is required", "error")
             return
         }
 
         if (messageValue.trim() == ""){
-            alert("Your message is required")
+            toast("Your message is required", "error")
             return
         }
 
@@ -51,7 +52,7 @@ export function ContactInput() {
         // Vite embebe estas variables en build: si faltan en el hosting, el envío falla en silencio.
         if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
             console.error('Faltan variables VITE_EMAILJS_* en el build')
-            alert("The email service is not configured")
+            toast("The email service is not configured", "error")
             return
         }
 
@@ -61,7 +62,7 @@ export function ContactInput() {
             })
             .then(
                 () => {
-                    alert("Your email was sent successfully")
+                    toast("Your email was sent successfully")
                     name.clear()
                     email.clear()
                     subject.clear()
@@ -69,7 +70,7 @@ export function ContactInput() {
                 },
                 (error) => {
                     console.error('An error occurred while sending data.', error.text);
-                    alert("Your email could not be sent, please try again later")
+                    toast("Your email could not be sent, please try again later", "error")
                 },
             );
         };

@@ -15,7 +15,7 @@ export function NavbarIconCartRender({ id, image, price, quantity, title, remove
                     <span className='text-brand'>Rs. {price}</span>
                 </div>
             </div>
-            <CircleX size={18} className='text-gray-400 cursor-pointer' onClick={() => removeFromCart(id)} />
+            <button onClick={() => removeFromCart(id)} aria-label={`Remove ${title} from cart`}><CircleX size={18} className='text-gray-400 cursor-pointer' /></button>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CheckoutOrderPay } from './checkout-order-pay'
 import { CheckoutOrderBilling } from './checkout-order-billing'
+import { toast } from '../../../store/toast-store'
 import { useGetAuthCartStore } from '../../../hooks/use-get-auth-cart-store'
 
 export function CheckoutOrder() {
@@ -14,7 +15,7 @@ export function CheckoutOrder() {
         e.preventDefault(); 
 
         clearCart()
-        alert("Your purchase was completed successfully")
+        toast("Your purchase was completed successfully")
         navigate("/")
     };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGetAuthService } from "../../../hooks/use-get-auth-service";
+import { toast } from "../../../store/toast-store";
 import AuthLoginInputsCard from "./auth-login-inputs-card";
 
 
@@ -24,7 +25,7 @@ export function AuthLoginInputs() {
             navigate(previousRoute, { replace: true })
         }
         catch {
-            alert("Username or password are incorrects"); 
+            toast("Username or password are incorrect", "error"); 
         }
     }
 

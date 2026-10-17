@@ -38,7 +38,7 @@ export function NavbarIconUser() {
                         </button>
                         {
                             isOpen && (
-                                <div className='absolute left-0 top-10 z-20 bg-white border border-gray-100 w-48 rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in duration-200' onClick={handleToggle}>
+                                <div className='absolute left-0 top-10 z-20 bg-white border border-gray-100 w-48 rounded-xl shadow-xl overflow-hidden origin-top-left transition-[opacity,transform] duration-150 ease-out starting:opacity-0 starting:scale-95' onClick={handleToggle}>
                                     <button
                                         onClick={handleLogout}
                                         className='w-full flex justify-between items-center px-4 py-3 text-gray-700 hover:text-red-600 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-red-500'

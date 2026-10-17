@@ -13,7 +13,7 @@ export function ProductsButton() {
     return (
         <button 
             onClick={handleClick}
-            className="py-3 px-20 mt-10 text-yellow-400 border-yellow-400 border-2 font-['Poppins'] font-semibold text-base cursor-pointer hover:bg-amber-300 hover:text-white transition-all duration-300"
+            className="py-3 px-20 mt-10 text-yellow-400 border-yellow-400 border-2 font-['Poppins'] font-semibold text-base cursor-pointer hover:bg-amber-300 hover:text-white transition-[background-color,color,transform] duration-150 ease-out"
         >
             Show more
         </button>

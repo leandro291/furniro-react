@@ -37,11 +37,12 @@ export function CartDisplayProducts({ id, image, price, quantity, title, removeF
             </span>
 
             <div className='flex justify-end md:justify-center'>
-                <Trash 
-                    className='fill-brand text-brand cursor-pointer hover:scale-110 transition-transform p-1 md:p-0' 
-                    size={30}
-                    onClick={() => removeFromCart(id)}
-                />
+                <button onClick={() => removeFromCart(id)} aria-label={`Remove ${title} from cart`}>
+                    <Trash
+                        className='fill-brand text-brand cursor-pointer hover:scale-110 transition-transform p-1 md:p-0'
+                        size={30}
+                    />
+                </button>
             </div>
         </div>
     )

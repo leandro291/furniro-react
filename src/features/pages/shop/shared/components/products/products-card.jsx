@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { DisplayRating } from '../../../utils/products/display-rating'
 
@@ -8,6 +8,7 @@ export function ProductsCard({ product, withNavigation = true }) {
     const outOfStock = stock === 0
 
     const navigate = useNavigate()
+    const [ loaded, setLoaded ] = useState(false)
 
     const handleNavigate = () => {
         if (!withNavigation) return
@@ -18,7 +19,7 @@ export function ProductsCard({ product, withNavigation = true }) {
 
     return (
         <article
-            className={`flex flex-col gap-1 min-h-112.5 w-60 mx-auto lg:w-full bg-white border border-gray-100 rounded-xl shadow-sm transition-all hover:shadow-md hover:border-brand/40 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand ${withNavigation && "cursor-pointer"}`}
+            className={`flex flex-col gap-1 min-h-112.5 w-60 mx-auto lg:w-full bg-white border border-gray-100 rounded-xl shadow-sm transition-[transform,box-shadow,border-color] duration-200 ease-out active:scale-[0.98] hover:shadow-md hover:border-brand/40 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand ${withNavigation && "cursor-pointer"}`}
             onClick={handleNavigate}
             tabIndex={withNavigation ? 0 : undefined}
             role={withNavigation ? "link" : undefined}
@@ -26,7 +27,7 @@ export function ProductsCard({ product, withNavigation = true }) {
         >
 
             <div className="h-64 flex items-center justify-center p-6 bg-gray-50 rounded-t-xl relative">
-                <img loading="lazy" decoding="async" className="max-h-full object-contain" src={image} alt={title} />
+                <img loading="lazy" decoding="async" className={`max-h-full object-contain transition-opacity duration-200 ease-out ${loaded ? "opacity-100" : "opacity-0"}`} src={image} alt={title} onLoad={() => setLoaded(true)} />
                 {outOfStock && (
                     <span className="absolute top-3 left-3 bg-gray-800 text-white text-xs font-poppins px-2 py-1 rounded">
                         Sin stock

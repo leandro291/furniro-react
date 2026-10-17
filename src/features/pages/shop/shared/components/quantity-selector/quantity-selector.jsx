@@ -20,11 +20,11 @@ export function QuantitySelector({ quantity, onIncrease, onDecrease, variant = '
 
     return (
         <div className={styles.wrapper}>
-            <button onClick={onDecrease} className={styles.button}>
+            <button onClick={onDecrease} className={styles.button} aria-label="Decrease quantity">
                 {isCompact ? <Minus size={14} /> : '-'}
             </button>
             <span className={styles.value}>{quantity}</span>
-            <button onClick={onIncrease} className={styles.button}>
+            <button onClick={onIncrease} className={styles.button} aria-label="Increase quantity">
                 {isCompact ? <Plus size={14} /> : '+'}
             </button>
         </div>
