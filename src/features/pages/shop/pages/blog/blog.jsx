@@ -5,6 +5,7 @@ import { HeroBanner } from '../../shared/components/hero-banner/hero-banner'
 export function BlogPage() {
     return (
         <>
+            <title>Blog | Furniro</title>
             <Blog />
         </>
     )

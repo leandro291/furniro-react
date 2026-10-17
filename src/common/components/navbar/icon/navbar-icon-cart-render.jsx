@@ -5,7 +5,7 @@ export function NavbarIconCartRender({ id, image, price, quantity, title, remove
 
     return (
         <div className='flex items-center gap-4'>
-            <img src={image} alt="Product" className='h-20 w-20 rounded-lg object-contain' />
+            <img loading="lazy" decoding="async" src={image} alt="Product" className='h-20 w-20 rounded-lg object-contain' />
 
             <div className='flex-1'>
                 <p className='font-medium'>{title}</p>
@@ -15,7 +15,7 @@ export function NavbarIconCartRender({ id, image, price, quantity, title, remove
                     <span className='text-brand'>Rs. {price}</span>
                 </div>
             </div>
-            <CircleX size={18} className='text-gray-400 cursor-pointer' onClick={() => removeFromCart(id)} />
+            <button onClick={() => removeFromCart(id)} aria-label={`Remove ${title} from cart`}><CircleX size={18} className='text-gray-400 cursor-pointer' /></button>
         </div>
     )
 }

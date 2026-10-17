@@ -18,3 +18,20 @@ export const apiClient = axios.create({
     baseURL: BASE_URLS[API_SOURCE],
     timeout: TIMEOUTS[API_SOURCE],
 })
+
+// Caché GET en memoria con TTL corto: evita re-pedir el mismo catálogo al navegar
+// entre home/shop/detalle y deduplica requests concurrentes (misma promesa).
+// ponytail: sin invalidación manual, el stock puede tardar hasta TTL_MS en refrescarse.
+const TTL_MS = 60000
+const cache = new Map()
+
+export const cachedGet = (url, params) => {
+    const key = url + JSON.stringify(params ?? {})
+    const hit = cache.get(key)
+    if (hit && Date.now() - hit.at < TTL_MS) return hit.promise
+
+    const promise = apiClient.get(url, { params }).then((res) => res.data)
+    cache.set(key, { promise, at: Date.now() })
+    promise.catch(() => cache.delete(key))
+    return promise
+}

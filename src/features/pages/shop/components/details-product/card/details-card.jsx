@@ -7,6 +7,7 @@ import { DisplayTags } from '../../../utils/details-product/display-tags';
 import { useCategoriesStore } from '../../../store/categories-store';
 import { useGetAuthCartStore } from '../../../hooks/use-get-auth-cart-store';
 import { QuantitySelector } from '../../../shared/components/quantity-selector/quantity-selector';
+import { toast } from '../../../store/toast-store';
 import { OutlineButton } from '../../../shared/components/outline-button/outline-button';
 
 
@@ -36,13 +37,13 @@ export function DetailsCard({ product }) {
             <div className='grid grid-cols-1 lg:grid-cols-2 max-w-300 mx-auto mt-10'>
 
                 <div className='w-auto sm:w-105 flex justify-center items-center bg-orange-50 h-125 mx-auto rounded-2xl'>
-                    <img className='h-100 sm:w-full object-contain block px-20' src={image} alt="" />
+                    <img className='h-100 sm:w-full object-contain block px-20' src={image} alt={title} />
                 </div>
 
                 <div className='w-full flex flex-col justify-center items-center'>
                     <div className='flex flex-col gap-10 md:w-150 lg:w-full min-h-150 h-full justify-between py-10'>
                         <div className='flex flex-col gap-4 px-8 sm:px-2'>
-                            <h2 className='font-["Poppins"] text-2xl lg:text-[35px] font-bold text-center lg:text-left '>{title}</h2>
+                            <h1 className='font-["Poppins"] text-2xl lg:text-[35px] font-bold text-center lg:text-left '>{title}</h1>
                             <p className='font-["Poppins"] text-lg lg:text-2xl font-medium text-gray-400 px-'>Rs. {price}</p>
                             <p className='font-["Poppins"] text-xs lg:text-[14px] font-medium '>{description} </p>
                         </div>
@@ -58,7 +59,7 @@ export function DetailsCard({ product }) {
                             <div>
                                 <OutlineButton
                                     className="rounded-xl px-1 lg:px-10 py-3"
-                                    onClick={() => addToCart(product, quantity)}
+                                    onClick={() => { addToCart(product, quantity); toast(`${title} added to cart`) }}
                                     disabled={outOfStock}
                                 >
                                     {outOfStock ? "Sin stock" : "Add To Cart"}

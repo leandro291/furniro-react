@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
 import { ContactInputCard } from './contact-input-card'
+import { toast } from '../../../store/toast-store';
 import { useInputRefs } from '../../../hooks/use-inputs-ref';
 
 export function ContactInput() {
@@ -20,22 +21,22 @@ export function ContactInput() {
         const messageValue = message.getValue()
 
         if (nameValue.trim() == ""){
-            alert("Your name is required")
+            toast("Your name is required", "error")
             return
         }
 
         if (!emailValue.includes("@")){
-            alert("Your email is required")
+            toast("Your email is required", "error")
             return
         }
 
         if (subjectValue.trim() == ""){
-            alert("Your subject is required")
+            toast("Your subject is required", "error")
             return
         }
 
         if (messageValue.trim() == ""){
-            alert("Your message is required")
+            toast("Your message is required", "error")
             return
         }
 
@@ -46,20 +47,30 @@ export function ContactInput() {
             message: messageValue
         }
 
+        const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } = import.meta.env
+
+        // Vite embebe estas variables en build: si faltan en el hosting, el envío falla en silencio.
+        if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
+            console.error('Faltan variables VITE_EMAILJS_* en el build')
+            toast("The email service is not configured", "error")
+            return
+        }
+
         emailjs
-            .send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, formData, {
-                publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+            .send(VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, formData, {
+                publicKey: VITE_EMAILJS_PUBLIC_KEY,
             })
             .then(
                 () => {
-                    alert("Your email was sent successfully")
+                    toast("Your email was sent successfully")
                     name.clear()
                     email.clear()
                     subject.clear()
                     message.clear()
                 },
                 (error) => {
-                    console.log('An error occurred while sending data.', error.text);
+                    console.error('An error occurred while sending data.', error.text);
+                    toast("Your email could not be sent, please try again later", "error")
                 },
             );
         };

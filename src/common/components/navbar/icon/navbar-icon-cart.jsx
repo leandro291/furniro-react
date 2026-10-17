@@ -29,20 +29,20 @@ export function NavbarIconCart() {
     return (
         <div className='relative'>
 
-            <button onClick={handleToggle}><ShoppingCart /></button>
+            <button onClick={handleToggle} aria-label="Open cart"><ShoppingCart /></button>
             
                 {isOpen && (
                     <>
                         <div 
-                            className="fixed inset-0 z-40 bg-black/20" 
+                            className="fixed inset-0 z-40 bg-black/20 transition-opacity duration-200 ease-out starting:opacity-0" 
                             onClick={handleToggle} 
                         />
 
-                            <div className="absolute left-0 -translate-x-1/2 sm:translate-x-0 sm:-left-15 md:left-1 lg:-left-50 top-full md:top-9 min-w-80 z-[55] bg-white p-4 rounded-lg shadow-xl border border-gray-200">                            <div className='grid grid-rows-[auto_1fr_auto] h-125 gap-4 p-4'>
+                            <div className="origin-top-right transition-[opacity,transform] duration-200 ease-out starting:opacity-0 starting:scale-95 absolute left-0 -translate-x-1/2 sm:translate-x-0 sm:-left-15 md:left-1 lg:-left-50 top-full md:top-9 min-w-80 z-[55] bg-white p-4 rounded-lg shadow-xl border border-gray-200">                            <div className='grid grid-rows-[auto_1fr_auto] h-125 gap-4 p-4'>
 
                                 <div className='flex items-center justify-between border-b border-gray-200 py-4'>
                                     <h2 className='font-["Poppins"] text-xl font-semibold'>Shopping cart</h2>
-                                    <CircleX size={24} className="cursor-pointer" onClick={handleToggle} />
+                                    <button onClick={handleToggle} aria-label="Close cart"><CircleX size={24} className="cursor-pointer" /></button>
                                 </div>
 
                                 <div className='flex flex-col overflow-y-auto gap-6 py-4'>

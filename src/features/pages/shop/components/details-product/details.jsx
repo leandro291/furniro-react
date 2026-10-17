@@ -14,13 +14,14 @@ export function Details() {
     useEffect(() => {
         window.scrollTo({
             top: 0,             
-            behavior: 'smooth'  
+            behavior: 'instant'  
         });
     }, [product])
 
     if (loading){
         return (
             <div>
+                <title>Loading... | Furniro</title>
                 <SkeletonDetailProduct />
             </div>
         )
@@ -29,6 +30,7 @@ export function Details() {
     if (error){
         return(
             <div>
+                <title>Error | Furniro</title>
                 <h2>Ha ocurrido un error</h2>
             </div>
         )
@@ -36,6 +38,7 @@ export function Details() {
 
     return (
         <div className='container w-fit'>
+            <title>{`${product.title} | Furniro`}</title>
             <DetailsCard product={product} />
             <DetailsRelatedProducts product={product}/>
         </div>

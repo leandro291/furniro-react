@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 export function CarruselFunctions({ slides }) {
 
     return (
@@ -15,14 +17,14 @@ export function CarruselFunctions({ slides }) {
             slidesPerView={1.2}
             pagination={{ clickable: true }}
             navigation={true}
-            autoplay={{delay: 5000}}
+            autoplay={reduceMotion ? false : { delay: 5000, pauseOnMouseEnter: true, disableOnInteraction: false }}
             className="w-full h-full"
         >
             {
                 slides.map(({ id, image, title}) => (
                     <SwiperSlide key={id} className="relative ">
                         <div
-                            className="w-full h-full bg-cover bg-center transition-transform duration-500"
+                            className="w-full h-full bg-cover bg-center"
                             style={{ backgroundImage: `url(${image})` }}
                         >
                             <div className="absolute bottom-10 left-6 bg-white/70 backdrop-blur-md p-6 min-w-50">

@@ -4,7 +4,7 @@ import { Calendar, Tag, User } from 'lucide-react'
 export function BlogNoticesInformationCard({ image, user, date, category, title, description }) {
     return (
         <article className='max-w-210 w-full flex flex-col gap-4 '>
-            <img src={image} alt="" className='rounded-2xl'/>
+            <img loading="lazy" decoding="async" src={image} alt="" className='rounded-2xl'/>
             <div className='flex items-center gap-8'>
                 <p className='flex items-center gap-2'><User size={24} /> {user}</p>
                 <p className='flex items-center gap-2'><Calendar size={24} /> {date}</p>

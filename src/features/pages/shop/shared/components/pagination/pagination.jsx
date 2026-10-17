@@ -24,9 +24,9 @@ export function Pagination({ page, setPage, totalPages }) {
         <button
             onClick={handlePrev}
             disabled={isFirstPage}
-            className={`p-4 rounded-lg transition-all ${
+            className={`p-4 rounded-lg transition-[background-color,color,transform] duration-150 ease-out ${
                 isFirstPage 
-                    ? "bg-yellow-700 text-gray-300 cursor-not-allowed" 
+                    ? "bg-gray-100 text-gray-300 cursor-not-allowed" 
                     : "bg-yellow-700/20 text-black hover:bg-yellow-700 hover:text-white"
             }`}
         >
@@ -41,7 +41,7 @@ export function Pagination({ page, setPage, totalPages }) {
                 <button
                 key={pageNum}
                 onClick={() => setPage(pageNum)}
-                className={`w-12 h-12 rounded-lg text-xl transition-all ${
+                className={`w-12 h-12 rounded-lg text-xl transition-[background-color,color,transform] duration-150 ease-out ${
                     page === pageNum
                     ? "bg-yellow-700 text-white"
                     : "bg-yellow-700/20 text-black hover:bg-yellow-700 hover:text-white"
@@ -56,10 +56,10 @@ export function Pagination({ page, setPage, totalPages }) {
         <button
             onClick={handleNext}
             disabled={isLastPage}
-            className={`p-4 rounded-lg transition-all ${
+            className={`p-4 rounded-lg transition-[background-color,color,transform] duration-150 ease-out ${
                 isLastPage 
                     ? "bg-gray-100 text-gray-300 cursor-not-allowed" 
-                    : "bg-[#F9F1E7] text-black hover:bg-brand hover:text-white"
+                    : "bg-yellow-700/20 text-black hover:bg-yellow-700 hover:text-white"
             }`}
         >
             <ChevronRight size={20} />

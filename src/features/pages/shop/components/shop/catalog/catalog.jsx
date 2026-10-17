@@ -23,11 +23,13 @@ export function Catalog() {
     const end = Math.min(page * PAGE_SIZE, count)
 
     useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }, [page, sortMethod])
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [page])
+
+    // ordenar se usa seguido: sin animación de scroll
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' })
+    }, [sortMethod])
 
     if (loading){
         return (
