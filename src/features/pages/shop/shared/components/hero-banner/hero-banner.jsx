@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import banner from "../../../../../../assets/imgs/sections-banner.png"
+import banner from "../../../../../../assets/imgs/sections-banner.webp"
 
 export function HeroBanner({ title }) {
     return (

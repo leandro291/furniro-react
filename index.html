@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+    <!-- Despierta la instancia de Render (cold start 30-50s) en paralelo a la carga del bundle. -->
+    <script>
+      if ('%VITE_API_SOURCE%' === 'furniro') fetch('%VITE_FURNIRO_BASE_URL%/api/catalog/categories/', { mode: 'no-cors' }).catch(function () {})
+    </script>
     <title>proyecto-3</title>
   </head>
   <body>

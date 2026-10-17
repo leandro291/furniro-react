@@ -5,7 +5,7 @@ export function NavbarIconCartRender({ id, image, price, quantity, title, remove
 
     return (
         <div className='flex items-center gap-4'>
-            <img src={image} alt="Product" className='h-20 w-20 rounded-lg object-contain' />
+            <img loading="lazy" decoding="async" src={image} alt="Product" className='h-20 w-20 rounded-lg object-contain' />
 
             <div className='flex-1'>
                 <p className='font-medium'>{title}</p>

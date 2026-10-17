@@ -26,7 +26,7 @@ export function ProductsCard({ product, withNavigation = true }) {
         >
 
             <div className="h-64 flex items-center justify-center p-6 bg-gray-50 rounded-t-xl relative">
-                <img className="max-h-full object-contain" src={image} alt={title} />
+                <img loading="lazy" decoding="async" className="max-h-full object-contain" src={image} alt={title} />
                 {outOfStock && (
                     <span className="absolute top-3 left-3 bg-gray-800 text-white text-xs font-poppins px-2 py-1 rounded">
                         Sin stock
