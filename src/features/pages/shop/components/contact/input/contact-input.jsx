@@ -46,9 +46,18 @@ export function ContactInput() {
             message: messageValue
         }
 
+        const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } = import.meta.env
+
+        // Vite embebe estas variables en build: si faltan en el hosting, el envío falla en silencio.
+        if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
+            console.error('Faltan variables VITE_EMAILJS_* en el build')
+            alert("The email service is not configured")
+            return
+        }
+
         emailjs
-            .send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, formData, {
-                publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+            .send(VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, formData, {
+                publicKey: VITE_EMAILJS_PUBLIC_KEY,
             })
             .then(
                 () => {
@@ -59,7 +68,8 @@ export function ContactInput() {
                     message.clear()
                 },
                 (error) => {
-                    console.log('An error occurred while sending data.', error.text);
+                    console.error('An error occurred while sending data.', error.text);
+                    alert("Your email could not be sent, please try again later")
                 },
             );
         };
