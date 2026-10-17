@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/common/iconoLogo.png"
+import logo from "../../assets/common/logo.svg"
 import { Link } from 'react-router-dom'
 
 export function Logo() {
