@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Todo el UI está dimensionado en rem: bajar la base a 14px lo escala de forma uniforme. */
+html {
+    font-size: 87.5%;
+}
+
 @theme {
     --color-brand: #B88E2F;
     --font-poppins: 'Poppins', sans-serif;
