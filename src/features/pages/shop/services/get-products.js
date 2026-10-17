@@ -13,7 +13,8 @@ export const GetProducts = async ({ page = 1, limit } = {}) => {
             count: data.count,
             next: data.next,
             previous: data.previous,
-            results: data.results.map(normalizeProduct),
+            // el backend ignora page_size (GAP conocido): se recorta acá para respetar el límite pedido
+            results: data.results.slice(0, limit).map(normalizeProduct),
         }
     }
 
