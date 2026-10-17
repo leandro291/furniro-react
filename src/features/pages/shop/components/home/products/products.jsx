@@ -28,7 +28,7 @@ export function Products() {
         <section>
             <div className="container mx-auto mt-14 flex flex-col items-center">
 
-                <h1 className="font-['Poppins'] font-bold text-[40px]" >Our Products</h1>
+                <h2 className="font-['Poppins'] font-bold text-[40px]" >Our Products</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-80 sm:max-w-300 w-full gap-6 mt-10">
                     {
