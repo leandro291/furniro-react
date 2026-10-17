@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://furniro-react-ecommerce.vercel.app"><img src="https://img.shields.io/badge/Ver_demo-2F81F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Ver demo"></a>
-  <a href="https://github.com/leandro291/furniro-ecommerce-backend"><img src="https://img.shields.io/badge/Backend-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Backend"></a>
+  <a href="https://github.com/leandro291/furniro-django"><img src="https://img.shields.io/badge/Backend-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Backend"></a>
 </p>
 
 
