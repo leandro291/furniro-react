@@ -2,7 +2,13 @@
 
 /* Todo el UI está dimensionado en rem: bajar la base a 14px lo escala de forma uniforme. */
 html {
-    font-size: 87.5%;
+    font-size: 100%;
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 87.5%;
+    }
 }
 
 @theme {

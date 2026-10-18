@@ -41,7 +41,7 @@ export function Pagination({ page, setPage, totalPages }) {
                 <button
                 key={pageNum}
                 onClick={() => setPage(pageNum)}
-                className={`w-12 h-12 rounded-lg text-xl transition-[background-color,color,transform] duration-150 ease-out ${
+                className={`min-w-[44px] min-h-[44px] rounded-lg text-xl transition-[background-color,color,transform] duration-150 ease-out ${
                     page === pageNum
                     ? "bg-yellow-700 text-white"
                     : "bg-yellow-700/20 text-black hover:bg-yellow-700 hover:text-white"

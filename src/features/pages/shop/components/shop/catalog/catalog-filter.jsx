@@ -3,7 +3,7 @@ import React from 'react'
 
 export function CatalogFilter({ view, setView, totalProducts, showPerPage, sortMethod, setSortMethod, currentStart, currentEnd }) {
     return (
-        <div className='min-h-16 lg:min-h-24 bg-amber-100/50 flex lg:flex-row gap-6 lg:gap-10 justify-center lg:justify-around items-center py-5 px-4'>
+        <div className='min-h-16 lg:min-h-24 bg-amber-100/50 flex flex-wrap lg:flex-nowrap lg:flex-row gap-6 lg:gap-10 justify-center lg:justify-around items-center py-5 px-4'>
 
             <div className='flex justify-between flex-row items-center gap-5 lg:gap-10 w-full lg:w-auto'>
 
@@ -13,15 +13,13 @@ export function CatalogFilter({ view, setView, totalProducts, showPerPage, sortM
                         <SlidersHorizontal />
                         <p className='font-["Poppins"] text-xl font-normal'>Filter</p>
                     </div>
-                    <div className='gap-10 hidden sm:flex'>
-                        <LayoutGrid 
-                            className={`cursor-pointer transition-colors ${view === 'grid' ? 'text-brand' : 'text-black'}`}
-                            onClick={() => setView("grid")}
-                        />
-                        <AlignVerticalSpaceAround
-                            className={`cursor-pointer transition-colors ${view === 'list' ? 'text-brand' : 'text-black'}`} 
-                            onClick={() => setView("list")}
-                        />
+                    <div className='gap-2 hidden sm:flex'>
+                        <button aria-label="Grid view" aria-pressed={view === 'grid'} onClick={() => setView("grid")} className="flex min-h-[44px] min-w-[44px] items-center justify-center">
+                            <LayoutGrid className={`transition-colors ${view === 'grid' ? 'text-brand' : 'text-black'}`} />
+                        </button>
+                        <button aria-label="List view" aria-pressed={view === 'list'} onClick={() => setView("list")} className="flex min-h-[44px] min-w-[44px] items-center justify-center">
+                            <AlignVerticalSpaceAround className={`transition-colors ${view === 'list' ? 'text-brand' : 'text-black'}`} />
+                        </button>
                     </div>
 
                 </div>      

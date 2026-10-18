@@ -16,11 +16,11 @@ export function BlogNoticesSearch({ blog, blog_categories}) {
                 <input 
                     value={search}
                     type="text"
-                    className='flex-1 focus:outline-none'
+                    className='flex-1 min-h-[44px] focus:outline-none'
                     onChange={(e) => setSearch((e.target.value))}
                     placeholder='Search a blog notice...'
                 />
-                <button><Search size={30} /></button>
+                <button aria-label="Search" className="flex min-h-[44px] min-w-[44px] items-center justify-center"><Search size={30} /></button>
             </div>
 
             <div className='my-10 flex flex-col gap-8 px-10 '>

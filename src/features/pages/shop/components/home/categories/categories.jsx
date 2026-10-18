@@ -13,13 +13,13 @@ export function Categories({ card_categories }) {
     const allLoading = loadingCount >= 3
 
     return (
-        <div className="container mx-auto mt-14 flex flex-col items-center">
+        <div className="container mx-auto mt-14 px-4 sm:px-0 flex flex-col items-center">
             <h2 className="font-['Poppins'] font-bold text-[32px]">Browse The Range</h2>
             <p className="font-['Poppins'] font-light text-[20px] text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             {!allLoading && <SkeletonCategories/>}
 
-            <div className={`grid grid-cols-3 gap-5 mt-15 max-w-300 w-full ${!allLoading ? 'hidden' : 'grid'}`}>
+            <div className={`grid grid-cols-3 gap-2 sm:gap-5 mt-10 sm:mt-15 max-w-300 w-full ${!allLoading ? 'hidden' : 'grid'}`}>
 
                 {card_categories.map(({ id, img, name }) => (
                     <CategoriesCard key={id} img={img} name={name} handleLoading={handleLoading} />

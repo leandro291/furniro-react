@@ -14,7 +14,7 @@ export function BlogNoticesInformationCard({ image, user, date, category, title,
                 <h2 className='font-["Poppins"] font-normal text-3xl'>{title}</h2>
                 <p className='font-["Poppins"] font-normal text-[15px]'>{description}</p>
             </div>
-            <button className='border-b-2 w-25 p-2 cursor-pointer'>Read more</button>
+            <button className='border-b-2 w-25 p-2 min-h-[44px] cursor-pointer'>Read more</button>
         </article>
     )
 }
