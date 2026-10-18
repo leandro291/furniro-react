@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T15:14:38+00:00",
+  "title": "Design System: Furniro",
+  "extensions": {
+    "colorMeta": {
+      "brass": {
+        "role": "primary",
+        "displayName": "Latón envejecido",
+        "canonical": "#B88E2F",
+        "oklch": "oklch(67.0% 0.120 84)",
+        "tonalRamp": [
+          "#140900",
+          "#322200",
+          "#553E00",
+          "#7B5C0D",
+          "#A47B12",
+          "#C99E42",
+          "#EEC268",
+          "#FFECC9"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#000000",
+        "oklch": "oklch(0.0% 0.000 0)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Grafito",
+        "canonical": "#4B5563",
+        "oklch": "oklch(44.6% 0.026 257)",
+        "tonalRamp": [
+          "#050B16",
+          "#1D2632",
+          "#394350",
+          "#586270",
+          "#788392",
+          "#9BA6B6",
+          "#BECADB",
+          "#E5EFFE"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Gris apagado",
+        "canonical": "#6B7280",
+        "oklch": "oklch(55.1% 0.023 264)",
+        "tonalRamp": [
+          "#070B15",
+          "#1F2531",
+          "#3C424F",
+          "#5B616F",
+          "#7B8291",
+          "#9EA5B4",
+          "#C2C9D9",
+          "#E7EFFF"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Línea fina",
+        "canonical": "#9CA3AF",
+        "oklch": "oklch(71.4% 0.019 261)",
+        "tonalRamp": [
+          "#070B13",
+          "#20252F",
+          "#3C424C",
+          "#5B626C",
+          "#7C838E",
+          "#9EA5B1",
+          "#C2CAD6",
+          "#E7EFFC"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Niebla",
+        "canonical": "#F3F4F6",
+        "oklch": "oklch(96.7% 0.003 265)",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#242526",
+          "#414243",
+          "#606163",
+          "#818284",
+          "#A4A5A7",
+          "#C8C9CB",
+          "#EDEEF0"
+        ]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Página",
+        "canonical": "#F8FAFC",
+        "oklch": "oklch(98.4% 0.003 248)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#242527",
+          "#414244",
+          "#606163",
+          "#818284",
+          "#A3A5A7",
+          "#C7C9CB",
+          "#EDEFF1"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superficie",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Crema",
+        "canonical": "#FEF9E3",
+        "oklch": "oklch(98.0% 0.029 96)",
+        "tonalRamp": [
+          "#0F0B00",
+          "#292514",
+          "#464230",
+          "#66614F",
+          "#87836F",
+          "#AAA591",
+          "#CECAB4",
+          "#F4EFD9"
+        ]
+      },
+      "linen": {
+        "role": "neutral",
+        "displayName": "Lino",
+        "canonical": "#FFF7ED",
+        "oklch": "oklch(98.0% 0.016 74)",
+        "tonalRamp": [
+          "#0F0A05",
+          "#2A241D",
+          "#474139",
+          "#676058",
+          "#888178",
+          "#ABA49A",
+          "#CFC8BE",
+          "#F5EDE3"
+        ]
+      },
+      "danger": {
+        "role": "feedback",
+        "displayName": "Rojo de error",
+        "canonical": "#DC2626",
+        "oklch": "oklch(57.7% 0.215 27)",
+        "tonalRamp": [
+          "#220000",
+          "#4E0001",
+          "#7F060B",
+          "#B80211",
+          "#E73430",
+          "#FF7367",
+          "#FFB3A9",
+          "#FFE9E6"
+        ]
+      },
+      "toast": {
+        "role": "feedback",
+        "displayName": "Tinta de aviso",
+        "canonical": "#111827",
+        "oklch": "oklch(21.0% 0.032 265)",
+        "tonalRamp": [
+          "#050B18",
+          "#1D2535",
+          "#3A4253",
+          "#586174",
+          "#798296",
+          "#9BA5BA",
+          "#BFC9DF",
+          "#E7EFFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular del hero y banner de cada sección."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección del home."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nombre del producto en el detalle."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido y descripciones."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Texto de botones principales."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiqueta pequeña en mayúsculas."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-line",
+        "value": "0 1px 3px rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1)",
+        "purpose": "Header y tarjetas en reposo (Tailwind shadow-sm)."
+      },
+      {
+        "name": "lift-on-hover",
+        "value": "0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1)",
+        "purpose": "Tarjeta de producto al pasar el mouse (shadow-md)."
+      },
+      {
+        "name": "floating-layer",
+        "value": "0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1)",
+        "purpose": "Carrito y menú de usuario (shadow-xl)."
+      },
+      {
+        "name": "toast",
+        "value": "0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1)",
+        "purpose": "Avisos (shadow-lg)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "transform 160ms cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Botones: al presionar, scale(0.97)."
+      },
+      {
+        "name": "hover-color",
+        "value": "background-color 150ms ease-out, color 150ms ease-out",
+        "purpose": "Cambio de color de botones y enlaces."
+      },
+      {
+        "name": "card-lift",
+        "value": "transform 200ms ease-out, box-shadow 200ms ease-out",
+        "purpose": "Elevación de la tarjeta de producto."
+      },
+      {
+        "name": "layer-enter",
+        "value": "opacity 200ms ease-out, transform 200ms ease-out (desde scale 0.95)",
+        "purpose": "Entrada del panel de carrito y del menú de usuario, desde su disparador."
+      },
+      {
+        "name": "toast-visible",
+        "value": "2500ms visible, 150ms de salida",
+        "purpose": "Duración de los avisos."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal de la pantalla: latón envejecido, texto blanco en negrita, esquinas de 8 px.",
+      "html": "<button class=\"ds-btn-primary\">BUY NOW</button>",
+      "css": ".ds-btn-primary { background: var(--color-brand, #B88E2F); color: #fff; font: 700 14px/21px 'Poppins', sans-serif; padding: 17.5px 28px; border: 0; border-radius: 7px; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-brand, #B88E2F); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Acción secundaria: contorno de tinta que se invierte al pasar el mouse.",
+      "html": "<button class=\"ds-btn-outline\">Add To Cart</button>",
+      "css": ".ds-btn-outline { background: transparent; color: #000; border: 1px solid #000; font: 400 14px/21px 'Poppins', sans-serif; padding: 10.5px 35px; border-radius: 10.5px; cursor: pointer; transition: background-color 150ms ease-out, color 150ms ease-out, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-outline:hover { background: #000; color: #fff; } .ds-btn-outline:active { transform: scale(0.97); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-brand, #B88E2F); outline-offset: 2px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Tarjeta de producto: imagen sobre cuadrado gris claro, título de dos líneas, precio en latón y valoración.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-img\"></div><div class=\"ds-card-body\"><h3 class=\"ds-card-title\">Sofá Cloud</h3><p class=\"ds-card-price\">Rp 1250</p><div class=\"ds-card-stars\"><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"#eab308\" stroke=\"#eab308\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\"/></svg><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"#eab308\" stroke=\"#eab308\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\"/></svg><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"#eab308\" stroke=\"#eab308\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\"/></svg><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"#eab308\" stroke=\"#eab308\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z\"/></svg></div></div></article>",
+      "css": ".ds-card { width: 240px; background: #fff; border: 0.8px solid #f3f4f6; border-radius: 10.5px; box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); transition: transform 200ms ease-out, box-shadow 200ms ease-out; } .ds-card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1); } .ds-card-img { height: 192px; background: #f9fafb; border-radius: 10.5px 10.5px 0 0; } .ds-card-body { padding: 17.5px; display: flex; flex-direction: column; gap: 8px; } .ds-card-title { margin: 0; font: 500 14px/21px 'Poppins', sans-serif; color: #4b5563; } .ds-card-price { margin: 0; font: 700 17.5px/24.5px 'Poppins', sans-serif; color: var(--color-brand, #B88E2F); } .ds-card-stars { display: flex; gap: 2px; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header blanco con logo, enlaces en Poppins 600 y carrito con insignia.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\"><svg viewBox=\"0 0 50 32\" width=\"48\" height=\"32\" fill=\"none\" stroke=\"#D5A436\" stroke-width=\"2\" stroke-linejoin=\"round\"><polygon points=\"18.2,2.5 22.9,9.6 12.5,28.8 3.3,28.8\"/><polygon points=\"32.4,2.5 27.7,9.6 38.1,28.8 47.3,28.8\"/><polygon points=\"25.4,15.4 31.5,28 19.3,28\"/></svg><b>Furniro</b></span><nav class=\"ds-nav-links\"><a href=\"#\">Home</a><a href=\"#\">Shop</a><a href=\"#\">Blog</a><a href=\"#\">Contact</a></nav><span class=\"ds-nav-cart\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"8\" cy=\"21\" r=\"1\"/><circle cx=\"19\" cy=\"21\" r=\"1\"/><path d=\"M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12\"/></svg><i>1</i></span></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #fff; padding: 14px 24px; border-bottom: 1px solid rgba(17,24,39,.2); box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); font-family: 'Poppins', sans-serif; } .ds-nav-logo { display: flex; align-items: center; gap: 8px; } .ds-nav-logo b { font: 700 28px/1 'Poppins', sans-serif; color: #000; } .ds-nav-links { display: flex; gap: 32px; } .ds-nav-links a { font: 600 14px/21px 'Poppins', sans-serif; color: #000; text-decoration: none; padding: 11px 0; } .ds-nav-links a:hover { color: var(--color-brand, #B88E2F); } .ds-nav-links a:focus-visible { outline: 2px solid var(--color-brand, #B88E2F); outline-offset: 2px; } .ds-nav-cart { position: relative; color: #000; display: inline-flex; } .ds-nav-cart i { position: absolute; top: -8px; right: -10px; min-width: 16px; height: 16px; border-radius: 9999px; background: #dc2626; color: #fff; font: 700 10px/16px 'Poppins', sans-serif; text-align: center; font-style: normal; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de formulario con etiqueta superior, borde de 1,6 px en línea fina y 12 px de radio.",
+      "html": "<label class=\"ds-field\"><span>Your name</span><input type=\"text\" placeholder=\"Abc\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 14px; font-family: 'Poppins', sans-serif; width: 280px; } .ds-field span { font: 500 14px/21px 'Poppins', sans-serif; color: #000; } .ds-field input { font: 400 14px/21px 'Poppins', sans-serif; color: #000; background: transparent; border: 1.6px solid #9ca3af; border-radius: 10.5px; padding: 21px 17.5px; transition: border-color 150ms ease-out; } .ds-field input:focus-visible { outline: 2px solid var(--color-brand, #B88E2F); outline-offset: 2px; }"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Aviso breve centrado abajo: tinta oscura para éxito, rojo para error.",
+      "html": "<div class=\"ds-toast\" role=\"status\">Sofá Cloud added to cart</div>",
+      "css": ".ds-toast { display: inline-block; background: #111827; color: #fff; font: 400 12.25px/18px 'Poppins', sans-serif; padding: 10.5px 17.5px; border-radius: 7px; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Showroom Cálido",
+    "overview": "Furniro se comporta como una sala de exhibición luminosa: superficies blancas sobre un fondo casi blanco, el producto como protagonista y un único acento de latón envejecido que guía la mirada hacia lo que se puede comprar. La voz visual es cálida y confiable.",
+    "keyCharacteristics": [
+      "Fondos claros y cálidos; el color de marca es un solo latón envejecido.",
+      "Poppins en todo el texto.",
+      "Plano en reposo; sombra y desplazamiento solo como respuesta.",
+      "Esquinas redondeadas de 8 a 16 px.",
+      "Objetivos de 44 px y una sola columna en móvil."
+    ],
+    "rules": [
+      {
+        "name": "La Regla del Único Latón",
+        "body": "Hay un solo dorado en el sistema y aparece en menos de un 10 % de cada pantalla.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla del Texto Pequeño",
+        "body": "El latón no se usa para texto de cuerpo sobre blanco: da 3,0:1.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla de una sola Familia",
+        "body": "Todo el texto va en Poppins, incluido el logotipo, los botones y los campos.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla de Plano por Defecto",
+        "body": "Las superficies son planas en reposo; la sombra aparece como respuesta a un estado.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do usar Poppins en todo el texto, incluidos el logotipo, los botones y los campos.",
+      "Do dejar un solo botón principal por pantalla: latón envejecido, texto blanco en negrita y 8 px de radio.",
+      "Do mantener las superficies planas en reposo y dejar la sombra y el desplazamiento para la interacción.",
+      "Do fijar los objetivos táctiles en 44 px mínimos, medidos en píxeles.",
+      "Do animar en 150 a 200 ms con salida rápida y respetar prefers-reduced-motion.",
+      "Do mostrar el latón como señal escasa: precios, titular del hero y la acción principal."
+    ],
+    "donts": [
+      "Don't añadir otro dorado o amarillo.",
+      "Don't usar latón para texto pequeño sobre blanco.",
+      "Don't crear botones dorados cuadrados ni botones de contorno amarillo para acciones principales.",
+      "Don't mezclar radios sueltos: la escala es 8, 12 y 16 px.",
+      "Don't dimensionar objetivos táctiles en rem.",
+      "Don't dejar texto de relleno ni mezclar idiomas y monedas en la interfaz."
+    ]
+  }
+}
