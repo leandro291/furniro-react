@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { RoomShowcaseSkeleton } from '../../../shared/components/skeleton/skeleton-room-showcase'
+import { ROOM_PHOTOS, roomPhotoUrl } from '../../../constants/home/room-showcase'
 
 export function RoomShowcaseMosaic() {
 
@@ -9,51 +10,19 @@ export function RoomShowcaseMosaic() {
         setLoadingCount(next => next + 1);
     };
 
-    const allLoading = loadingCount >= 9;
+    const allLoading = loadingCount >= ROOM_PHOTOS.length;
 
     return (
-        <div className='relative'>
+        <div className='relative px-4 md:px-0'>
 
             {!allLoading && <RoomShowcaseSkeleton />}
 
-            <div className={`container grid grid-cols-11 grid-rows-[repeat(10,60px)] gap-5 ${!allLoading ? 'hidden' : 'block'}`}>
-
-
-                <div className='col-start-1 col-span-1 row-start-1 row-span-5'>
-                    <img src="https://images.pexels.com/photos/33569933/pexels-photo-33569933.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad} />
-                </div>
-
-                <div className='col-start-1 col-span-1 row-start-6 row-span-5'>
-                    <img src="https://images.pexels.com/photos/16283231/pexels-photo-16283231.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad} />
-                </div>
-
-                <div className='col-start-2 col-span-4 row-start-2 row-span-4'>
-                    <img src="https://images.pexels.com/photos/8989592/pexels-photo-8989592.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad} />
-                </div>
-
-                <div className='col-start-3 col-span-3 row-start-6 row-span-4'>
-                    <img src="https://images.pexels.com/photos/4581902/pexels-photo-4581902.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover'  onLoad={handleImageLoad}/>
-                </div>
-
-                <div className='col-start-8 col-span-3 row-start-2 row-span-5'>
-                    <img src="https://images.pexels.com/photos/32841967/pexels-photo-32841967.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover'onLoad={handleImageLoad}/>
-                </div>
-
-                <div className='col-start-6 col-span-2 row-start-3 row-span-6'>
-                    <img src="https://images.pexels.com/photos/2090786/pexels-photo-2090786.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad}/>
-                </div>
-
-                <div className='col-start-10 col-span-2 row-start-7 row-span-2'>
-                    <img src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad}/>
-                </div>
-
-                <div className='col-start-11 col-span-1 row-start-1 row-span-6'>
-                    <img src="https://images.pexels.com/photos/35820991/pexels-photo-35820991.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad}/>
-                </div>
-
-                <div className='col-start-8 col-span-2 row-start-7 row-span-3'>
-                    <img src="https://images.pexels.com/photos/29043373/pexels-photo-29043373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='w-full h-full object-cover' onLoad={handleImageLoad}/>
-                </div>
+            <div className={`container grid grid-cols-2 gap-3 md:grid-cols-11 md:grid-rows-[repeat(10,60px)] md:gap-5 ${!allLoading ? 'hidden' : ''}`}>
+                {ROOM_PHOTOS.map(([id, place], i) => (
+                    <div key={id} className={`aspect-[4/5] md:aspect-auto overflow-hidden ${i === ROOM_PHOTOS.length - 1 ? 'max-md:col-span-2 max-md:aspect-video' : ''} ${place}`}>
+                        <img src={roomPhotoUrl(id)} alt="" className='w-full h-full object-cover' onLoad={handleImageLoad} />
+                    </div>
+                ))}
             </div>
         </div>
     )

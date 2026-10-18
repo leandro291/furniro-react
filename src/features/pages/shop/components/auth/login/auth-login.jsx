@@ -17,7 +17,7 @@ export function AuthLogin() {
 
     return (
         <div>
-            <button className='flex items-center gap-2 cursor-pointer hover:text-gray-500 transition-colors py-2 px-2' onClick={handleBack}>
+            <button className='flex items-center gap-2 cursor-pointer hover:text-gray-500 transition-colors py-2 px-2 min-h-[44px]' onClick={handleBack}>
                 <ArrowLeft size={20} />
                 <span className='text-xl text-black '>Volver atras</span>
             </button>

@@ -25,14 +25,14 @@ export function NavbarIconUser() {
     }
 
     return (
-        <div className='relative flex items-center gap-3 font-["Poppins"]'>
-            <button className='flex' ><User /></button>
+        <div className='relative flex items-center gap-1 sm:gap-3 font-["Poppins"]'>
+            <button className='hidden sm:flex min-h-[44px] min-w-[44px] items-center justify-center' aria-label='Account'><User /></button>
             {
                 isAuthenticated ? (
                     <>
                         <button
                             onClick={handleToggle}
-                            className='flex items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors font-medium text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand rounded'
+                            className='flex min-h-[44px] items-center gap-1 cursor-pointer hover:text-gray-600 transition-colors font-medium text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand rounded'
                         >
                             Hola, {user}
                         </button>
@@ -51,7 +51,7 @@ export function NavbarIconUser() {
                         }
                     </>
                 ) : (
-                    <button onClick={handleLogin} className='cursor-pointer hover:text-gray-600 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand rounded'>Inicia sesión</button>
+                    <button onClick={handleLogin} className='min-h-[44px] whitespace-nowrap text-sm sm:text-base cursor-pointer hover:text-gray-600 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand rounded'>Inicia sesión</button>
                 )
             }
         </div>

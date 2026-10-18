@@ -29,7 +29,7 @@ export function NavbarIconCart() {
     return (
         <div className='relative'>
 
-            <button onClick={handleToggle} aria-label="Open cart"><ShoppingCart /></button>
+            <button onClick={handleToggle} aria-label="Open cart" className="flex min-h-[44px] min-w-[44px] items-center justify-center"><ShoppingCart /></button>
             
                 {isOpen && (
                     <>

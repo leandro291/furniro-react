@@ -7,11 +7,11 @@ export function FooterNewsletter() {
             
             <div className='flex gap-4 w-full'>
                 <input
-                    className='border-b-2 pr-5' 
+                    className='border-b-2 pr-5 min-h-[44px] min-w-0 flex-1' 
                     type="email"
                     placeholder='Enter Your Email Address' 
                 />
-                <button className='font-["Poppins"] text-14px uppercase border-b-2 cursor-pointer'>Subscribe</button>
+                <button className='font-["Poppins"] text-14px uppercase border-b-2 cursor-pointer min-h-[44px] px-2'>Subscribe</button>
             </div>
         </div>
     )
